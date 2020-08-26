@@ -1,2 +1,4 @@
-package modelo;public class Calculadora {
+package modelo;
+
+public class Calculadora {
 }
