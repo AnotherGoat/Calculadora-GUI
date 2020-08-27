@@ -1,2 +1,4 @@
-package lanzador;public class Launcher {
+package lanzador;
+
+public class Launcher {
 }
