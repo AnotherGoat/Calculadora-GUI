@@ -118,7 +118,7 @@ public class VentanaCalculadora extends JFrame{
         // Agregar panel a la ventana
         this.add(panel);
 
-        // Implementación de ActionListener en el botón sumarButton
+        // Implementación de ActionListener para el botón sumarButton
         sumarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -131,6 +131,24 @@ public class VentanaCalculadora extends JFrame{
                 int resultado = c.sumar();
 
                 textFieldResultado.setText(""+resultado);
+            }
+        });
+
+        // Implemetación de ActionListener para el botón salirButton
+        salirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Crea el panel para pedir confirmación
+                int n = JOptionPane.showConfirmDialog(panel.getParent(),
+                        "¿Está seguro de que desea salir?",
+                        "Salir del programa",
+                        JOptionPane.YES_NO_OPTION);
+
+                // Si el usuario escoge "Sí"
+                if(n == JOptionPane.YES_OPTION){
+                    // Sale del programa y retorna 0
+                    System.exit(0);
+                }
             }
         });
     }
