@@ -65,16 +65,24 @@ public class VentanaCalculadora extends JFrame implements ActionListener{
 
     //// Constructor
     public VentanaCalculadora(){
-        //initVentanaCalculadora();
+        iniciarVentanaCalculadora();
 
         //// Otras características de la ventana
         // Tamaño inicial
         setSize(600, 400);
+        // Iniciar en el centro
+        setLocationRelativeTo(null);
         // Terminar el programa al salir de la ventana
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     //// Métodos
+    private void iniciarVentanaCalculadora(){
+        panel = new JPanel();
+        
+    }
+
+
     public void actionPerformed(ActionEvent ae){
 
     }
