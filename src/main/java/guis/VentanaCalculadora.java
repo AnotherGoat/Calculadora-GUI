@@ -134,7 +134,17 @@ public class VentanaCalculadora extends JFrame{
             }
         });
 
-        // Implemetación de ActionListener para el botón salirButton
+        // Implementación de ActionListener para el botón limpiarButton
+        limpiarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textFieldNumero1.setText("");
+                textFieldNumero2.setText("");
+                textFieldResultado.setText("");
+            }
+        });
+
+        // Implementación de ActionListener para el botón salirButton
         salirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -151,6 +161,7 @@ public class VentanaCalculadora extends JFrame{
                 }
             }
         });
+
     }
 
 
