@@ -79,7 +79,42 @@ public class VentanaCalculadora extends JFrame implements ActionListener{
     //// Métodos
     private void iniciarVentanaCalculadora(){
         panel = new JPanel();
-        
+
+        labelNumero1 = new JLabel();
+        labelNumero1.setText("Número 1:");
+
+        labelNumero2 = new JLabel();
+        labelNumero2.setText("Número 2:");
+
+        labelResultado = new JLabel();
+        labelResultado.setText("Resultado:");
+
+        textFieldNumero1 = new JTextField(10);
+        textFieldNumero2 = new JTextField(10);
+        textFieldResultado = new JTextField(10);
+
+        sumarButton = new JButton();
+        sumarButton.setText("Sumar");
+
+        salirButton = new JButton();
+        salirButton.setText("Salir");
+
+        limpiarButton = new JButton();
+        limpiarButton.setText("Limpiar");
+
+        // Se agregan elementos al panel
+        panel.add(labelNumero1);
+        panel.add(textFieldNumero1);
+        panel.add(labelNumero2);
+        panel.add(textFieldNumero2);
+        panel.add(labelResultado);
+        panel.add(textFieldResultado);
+        panel.add(sumarButton);
+        panel.add(limpiarButton);
+        panel.add(salirButton);
+
+        // Agregar panel a la ventana
+        this.add(panel);
     }
 
 
