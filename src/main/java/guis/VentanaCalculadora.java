@@ -98,6 +98,15 @@ public class VentanaCalculadora extends JFrame{
         sumarButton = new JButton();
         sumarButton.setText("Sumar");
 
+        restarButton = new JButton();
+        restarButton.setText("Restar");
+
+        multiplicarButton = new JButton();
+        multiplicarButton.setText("Multiplicar");
+
+        dividirButton = new JButton();
+        dividirButton.setText("Dividir");
+
         salirButton = new JButton();
         salirButton.setText("Salir");
 
@@ -112,6 +121,9 @@ public class VentanaCalculadora extends JFrame{
         panel.add(labelResultado);
         panel.add(textFieldResultado);
         panel.add(sumarButton);
+        panel.add(restarButton);
+        panel.add(multiplicarButton);
+        panel.add(dividirButton);
         panel.add(limpiarButton);
         panel.add(salirButton);
 
@@ -133,6 +145,55 @@ public class VentanaCalculadora extends JFrame{
                 textFieldResultado.setText(""+resultado);
             }
         });
+
+        // Implementación de ActionListener para el botón restarButton
+        restarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Calculadora c;
+                int num1 = Integer.parseInt(textFieldNumero1.getText());
+                int num2 = Integer.parseInt(textFieldNumero2.getText());
+
+                c = new Calculadora(num1, num2);
+
+                int resultado = c.restar();
+
+                textFieldResultado.setText(""+resultado);
+            }
+        });
+
+        // Implementación de ActionListener para el botón multiplicarButton
+        multiplicarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Calculadora c;
+                int num1 = Integer.parseInt(textFieldNumero1.getText());
+                int num2 = Integer.parseInt(textFieldNumero2.getText());
+
+                c = new Calculadora(num1, num2);
+
+                int resultado = c.multiplicar();
+
+                textFieldResultado.setText(""+resultado);
+            }
+        });
+
+        // Implementación de ActionListener para el botón dividirButton
+        dividirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Calculadora c;
+                int num1 = Integer.parseInt(textFieldNumero1.getText());
+                int num2 = Integer.parseInt(textFieldNumero2.getText());
+
+                c = new Calculadora(num1, num2);
+
+                int resultado = c.dividir();
+
+                textFieldResultado.setText(""+resultado);
+            }
+        });
+
 
         // Implementación de ActionListener para el botón limpiarButton
         limpiarButton.addActionListener(new ActionListener() {
