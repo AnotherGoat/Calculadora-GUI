@@ -13,27 +13,27 @@ public class VentanaCalculadora extends JFrame implements ActionListener{
     /**
      * Botón para realizar una suma
      */
-    JButton sumarButton;
+    private JButton sumarButton;
     /**
      * Botón para realizar una resta
      */
-    JButton restarButton;
+    private JButton restarButton;
     /**
      * Botón para realizar una multiplicación
      */
-    JButton multiplicarButton;
+    private JButton multiplicarButton;
     /**
      * Botón para realizar una división
      */
-    JButton dividirButton;
+    private JButton dividirButton;
     /**
      * Botón para limpiar los números ingresados
      */
-    JButton limpiarButton;
+    private JButton limpiarButton;
     /**
      * Botón para salir del programa
      */
-    JButton salirButton;
+    private JButton salirButton;
 
     //// Botones
 
