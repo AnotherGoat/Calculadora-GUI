@@ -70,6 +70,8 @@ public class VentanaCalculadora extends JFrame{
         iniciarVentanaCalculadora();
 
         //// Otras características de la ventana
+        // Título
+        setTitle("Calculadora VM");
         // Tamaño inicial
         setSize(600, 400);
         // Iniciar en el centro
