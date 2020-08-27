@@ -63,7 +63,16 @@ public class VentanaCalculadora extends JFrame implements ActionListener{
      */
     private JTextField textFieldResultado;
 
-    //// Botones
+    //// Constructor
+    public VentanaCalculadora(){
+        //initVentanaCalculadora();
+
+        //// Otras características de la ventana
+        // Tamaño inicial
+        setSize(600, 400);
+        // Terminar el programa al salir de la ventana
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
 
     //// Métodos
     public void actionPerformed(ActionEvent ae){
