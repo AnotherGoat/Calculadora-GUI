@@ -1,5 +1,7 @@
 package guis;
 
+import modelo.Calculadora;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -7,7 +9,7 @@ import javax.swing.*;
 /**
  * Clase que contiene la ventana de la calculadora
  */
-public class VentanaCalculadora extends JFrame implements ActionListener{
+public class VentanaCalculadora extends JFrame{
 
     //// Atributos
     /**
@@ -115,6 +117,22 @@ public class VentanaCalculadora extends JFrame implements ActionListener{
 
         // Agregar panel a la ventana
         this.add(panel);
+
+        // Implementación de ActionListener en el botón sumarButton
+        sumarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Calculadora c;
+                int num1 = Integer.parseInt(textFieldNumero1.getText());
+                int num2 = Integer.parseInt(textFieldNumero2.getText());
+
+                c = new Calculadora(num1, num2);
+
+                int resultado = c.sumar();
+
+                textFieldResultado.setText(""+resultado);
+            }
+        });
     }
 
 

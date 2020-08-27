@@ -15,8 +15,13 @@ public class Calculadora {
      */
     private int numero2;
 
-    //// Métodos
+    //// Constructores
+    public Calculadora(int numero1, int numero2) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+    }
 
+    //// Métodos
     /**
      * Suma 2 números
      * @return int con el resultado
