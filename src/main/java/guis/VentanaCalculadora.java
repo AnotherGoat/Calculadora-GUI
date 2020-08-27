@@ -94,6 +94,7 @@ public class VentanaCalculadora extends JFrame{
         textFieldNumero1 = new JTextField(10);
         textFieldNumero2 = new JTextField(10);
         textFieldResultado = new JTextField(10);
+        textFieldResultado.setEditable(false);
 
         sumarButton = new JButton();
         sumarButton.setText("Sumar");
