@@ -13,7 +13,7 @@
         <maven.compiler.target>14</maven.compiler.target>
     </properties>
 
-    <dependecies>
+    <dependencies>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
@@ -26,6 +26,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-    </dependecies>
+    </dependencies>
 
 </project>
