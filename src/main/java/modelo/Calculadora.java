@@ -16,19 +16,36 @@ public class Calculadora {
     private int numero2;
 
     //// Métodos
-    public int sumar(int numero1, int numero2){
+
+    /**
+     * Suma 2 números
+     * @return int con el resultado
+     */
+    public int sumar(){
         return numero1 + numero2;
     }
 
-    public int restar(int numero1, int numero2){
+    /**
+     * Resta 2 números
+     * @return int con el resultado
+     */
+    public int restar(){
         return numero1 - numero2;
     }
 
-    public int multiplicar(int numero1, int numero2){
+    /**
+     * Multiplica 2 números
+     * @return int con el resultado
+     */
+    public int multiplicar(){
         return numero1 * numero2;
     }
 
-    public int dividir(int numero1, int numero2){
+    /**
+     * Divide 2 números
+     * @return int con el resultado
+     */
+    public int dividir(){
         return numero1 / numero2;
     }
 }
