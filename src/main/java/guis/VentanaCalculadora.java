@@ -1,6 +1,7 @@
 package guis;
 
 import modelo.Calculadora;
+import utilidades.Validador;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -64,6 +65,10 @@ public class VentanaCalculadora extends JFrame{
      * TextField donde se muestra el resultado
      */
     protected JTextField textFieldResultado;
+    /**
+     * Se usa para validar la entrada
+     */
+    protected Validador v;
 
     //// Constructores
     public VentanaCalculadora(){
@@ -121,15 +126,22 @@ public class VentanaCalculadora extends JFrame{
         sumarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Calculadora c;
-                double num1 = Double.parseDouble(textFieldNumero1.getText());
-                double num2 = Double.parseDouble(textFieldNumero2.getText());
+                // Si el texto no se puede convertir a double
+                if(!v.esDouble(textFieldNumero1.getText()) || !v.esDouble(textFieldNumero1.getText())){
+                    textFieldResultado.setText("ERROR");
+                }
 
-                c = new Calculadora(num1, num2);
+                else {
+                    Calculadora c;
+                    double num1 = Double.parseDouble(textFieldNumero1.getText());
+                    double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                double resultado = c.sumar();
+                    c = new Calculadora(num1, num2);
 
-                textFieldResultado.setText(""+resultado);
+                    double resultado = c.sumar();
+
+                    textFieldResultado.setText("" + resultado);
+                }
             }
         });
 
@@ -137,15 +149,22 @@ public class VentanaCalculadora extends JFrame{
         restarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Calculadora c;
-                double num1 = Double.parseDouble(textFieldNumero1.getText());
-                double num2 = Double.parseDouble(textFieldNumero2.getText());
+                // Si el texto no se puede convertir a double
+                if(!v.esDouble(textFieldNumero1.getText()) || !v.esDouble(textFieldNumero1.getText())){
+                    textFieldResultado.setText("ERROR");
+                }
 
-                c = new Calculadora(num1, num2);
+                else {
+                    Calculadora c;
+                    double num1 = Double.parseDouble(textFieldNumero1.getText());
+                    double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                double resultado = c.restar();
+                    c = new Calculadora(num1, num2);
 
-                textFieldResultado.setText(""+resultado);
+                    double resultado = c.restar();
+
+                    textFieldResultado.setText("" + resultado);
+                }
             }
         });
 
@@ -153,15 +172,22 @@ public class VentanaCalculadora extends JFrame{
         multiplicarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Calculadora c;
-                double num1 = Double.parseDouble(textFieldNumero1.getText());
-                double num2 = Double.parseDouble(textFieldNumero2.getText());
+                // Si el texto no se puede convertir a double
+                if(!v.esDouble(textFieldNumero1.getText()) || !v.esDouble(textFieldNumero1.getText())){
+                    textFieldResultado.setText("ERROR");
+                }
 
-                c = new Calculadora(num1, num2);
+                else {
+                    Calculadora c;
+                    double num1 = Double.parseDouble(textFieldNumero1.getText());
+                    double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                double resultado = c.multiplicar();
+                    c = new Calculadora(num1, num2);
 
-                textFieldResultado.setText(""+resultado);
+                    double resultado = c.multiplicar();
+
+                    textFieldResultado.setText("" + resultado);
+                }
             }
         });
 
@@ -169,15 +195,22 @@ public class VentanaCalculadora extends JFrame{
         dividirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Calculadora c;
-                double num1 = Double.parseDouble(textFieldNumero1.getText());
-                double num2 = Double.parseDouble(textFieldNumero2.getText());
+                // Si el texto no se puede convertir a double
+                if(!v.esDouble(textFieldNumero1.getText()) || !v.esDouble(textFieldNumero1.getText())){
+                    textFieldResultado.setText("ERROR");
+                }
 
-                c = new Calculadora(num1, num2);
+                else {
+                    Calculadora c;
+                    double num1 = Double.parseDouble(textFieldNumero1.getText());
+                    double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                double resultado = c.dividir();
+                    c = new Calculadora(num1, num2);
 
-                textFieldResultado.setText(""+resultado);
+                    double resultado = c.dividir();
+
+                    textFieldResultado.setText("" + resultado);
+                }
             }
         });
 

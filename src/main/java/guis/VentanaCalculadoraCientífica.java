@@ -51,15 +51,22 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
         potenciaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Calculadora c;
-                double num1 = Double.parseDouble(textFieldNumero1.getText());
-                double num2 = Double.parseDouble(textFieldNumero2.getText());
+                // Si el texto no se puede convertir a double
+                if(!v.esDouble(textFieldNumero1.getText()) || !v.esDouble(textFieldNumero1.getText())){
+                    textFieldResultado.setText("ERROR");
+                }
 
-                c = new Calculadora(num1, num2);
+                else {
+                    Calculadora c;
+                    double num1 = Double.parseDouble(textFieldNumero1.getText());
+                    double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                double resultado = c.potencia();
+                    c = new Calculadora(num1, num2);
 
-                textFieldResultado.setText(""+resultado);
+                    double resultado = c.potencia();
+
+                    textFieldResultado.setText("" + resultado);
+                }
             }
         });
 
@@ -67,15 +74,22 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
         raizButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Calculadora c;
-                double num1 = Double.parseDouble(textFieldNumero1.getText());
-                double num2 = Double.parseDouble(textFieldNumero2.getText());
+                // Si el texto no se puede convertir a double
+                if(!v.esDouble(textFieldNumero1.getText()) || !v.esDouble(textFieldNumero1.getText())){
+                    textFieldResultado.setText("ERROR");
+                }
 
-                c = new Calculadora(num1, num2);
+                else {
+                    Calculadora c;
+                    double num1 = Double.parseDouble(textFieldNumero1.getText());
+                    double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                double resultado = c.raiz();
+                    c = new Calculadora(num1, num2);
 
-                textFieldResultado.setText(""+resultado);
+                    double resultado = c.raiz();
+
+                    textFieldResultado.setText("" + resultado);
+                }
             }
         });
     }
