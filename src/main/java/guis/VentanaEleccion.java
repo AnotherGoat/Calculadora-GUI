@@ -1,5 +1,7 @@
 package guis;
 
+import modelo.Calculadora;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -40,6 +42,28 @@ public class VentanaEleccion extends JFrame{
         panel.add(opcion2Button);
 
         add(panel);
+
+        // Implementación de ActionListener para el botón opcion1Button
+        opcion1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                VentanaCalculadora vc = new VentanaCalculadora();
+                vc.setVisible(true);
+            }
+        });
+
+        // Implementación de ActionListener para el botón opcion2Button
+        opcion1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                VentanaCalculadoraCientífica vcc = new VentanaCalculadoraCientífica();
+                vcc.setVisible(true);
+            }
+        });
     }
 
 }
