@@ -23,6 +23,8 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
     public VentanaCalculadoraCientífica(){
         iniciar();
 
+        v = new Validador();
+
         //// Otras características de la ventana
         // Título
         setTitle("Calculadora Científica VM");
