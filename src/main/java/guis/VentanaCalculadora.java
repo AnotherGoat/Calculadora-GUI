@@ -84,37 +84,21 @@ public class VentanaCalculadora extends JFrame{
     private void iniciarVentanaCalculadora(){
         panel = new JPanel();
 
-        labelNumero1 = new JLabel();
-        labelNumero1.setText("Número 1:");
-
-        labelNumero2 = new JLabel();
-        labelNumero2.setText("Número 2:");
-
-        labelResultado = new JLabel();
-        labelResultado.setText("Resultado:");
+        labelNumero1 = new JLabel("Número 1:");
+        labelNumero2 = new JLabel("Número 2:");
+        labelResultado = new JLabel("Resultado:");
 
         textFieldNumero1 = new JTextField(10);
         textFieldNumero2 = new JTextField(10);
         textFieldResultado = new JTextField(10);
         textFieldResultado.setEditable(false);
 
-        sumarButton = new JButton();
-        sumarButton.setText("Sumar");
-
-        restarButton = new JButton();
-        restarButton.setText("Restar");
-
-        multiplicarButton = new JButton();
-        multiplicarButton.setText("Multiplicar");
-
-        dividirButton = new JButton();
-        dividirButton.setText("Dividir");
-
-        salirButton = new JButton();
-        salirButton.setText("Salir");
-
-        limpiarButton = new JButton();
-        limpiarButton.setText("Limpiar");
+        sumarButton = new JButton("Sumar");
+        restarButton = new JButton("Restar");
+        multiplicarButton = new JButton("Multiplicar");
+        dividirButton = new JButton("Dividir");
+        limpiarButton = new JButton("Limpiar");
+        salirButton = new JButton("Salir");
 
         // Se agregan elementos al panel
         panel.add(labelNumero1);
