@@ -11,17 +11,12 @@ import java.util.regex.Pattern;
 public class Validador {
 
     //// Atributos
-    /**
-     * Scanner para recibir entrada por teclado;
-     */
-    private Scanner teclado;
 
     //// Constructores
     /**
      * Constructor de clase Validador (instancia su Scanner cada vez para evitar errores)
      */
     public Validador() {
-        this.teclado = new Scanner(System.in);
     }
 
     //// Métodos

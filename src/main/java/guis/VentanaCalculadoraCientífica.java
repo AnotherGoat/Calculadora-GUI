@@ -7,6 +7,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/**
+ * Clase que contiene la ventana de la calculadora científica
+ */
 public class VentanaCalculadoraCientífica extends VentanaCalculadora {
 
     //// Atributos
