@@ -54,6 +54,22 @@ public class Calculadora {
         return numero1 / numero2;
     }
 
+    /**
+     * Calcula la potencia entre 2 números
+     * @return int con el resultado
+     */
+    public int potencia(){
+        return (int)Math.pow(numero1, numero2);
+    }
+
+    /**
+     * Calcula la raíz entre 2 números
+     * @return int con el resultado
+     */
+    public int raiz(){
+        return (int)Math.pow(numero1, 1/numero2);
+    }
+
     // Getters y Setters
     public int getNumero1() {
         return numero1;

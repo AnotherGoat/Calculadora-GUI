@@ -15,59 +15,59 @@ public class VentanaCalculadora extends JFrame{
     /**
      * Panel principal
      */
-    private JPanel panel;
+    protected JPanel panel;
     /**
      * Botón para realizar una suma
      */
-    private JButton sumarButton;
+    protected JButton sumarButton;
     /**
      * Botón para realizar una resta
      */
-    private JButton restarButton;
+    protected JButton restarButton;
     /**
      * Botón para realizar una multiplicación
      */
-    private JButton multiplicarButton;
+    protected JButton multiplicarButton;
     /**
      * Botón para realizar una división
      */
-    private JButton dividirButton;
+    protected JButton dividirButton;
     /**
      * Botón para limpiar los números ingresados
      */
-    private JButton limpiarButton;
+    protected JButton limpiarButton;
     /**
      * Botón para salir del programa
      */
-    private JButton salirButton;
+    protected JButton salirButton;
     /**
      * Label con el texto "Número 1:"
      */
-    private JLabel labelNumero1;
+    protected JLabel labelNumero1;
     /**
      * Label con el texto "Número 2:"
      */
-    private JLabel labelNumero2;
+    protected JLabel labelNumero2;
     /**
      * Label con el texto "Resultado:"
      */
-    private JLabel labelResultado;
+    protected JLabel labelResultado;
     /**
      * TextField donde se ingresa el número 1
      */
-    private JTextField textFieldNumero1;
+    protected JTextField textFieldNumero1;
     /**
      * TextField donde se ingresa el número 2
      */
-    private JTextField textFieldNumero2;
+    protected JTextField textFieldNumero2;
     /**
      * TextField donde se muestra el resultado
      */
-    private JTextField textFieldResultado;
+    protected JTextField textFieldResultado;
 
-    //// Constructor
+    //// Constructores
     public VentanaCalculadora(){
-        iniciarVentanaCalculadora();
+        iniciar();
 
         //// Otras características de la ventana
         // Título
@@ -81,7 +81,7 @@ public class VentanaCalculadora extends JFrame{
     }
 
     //// Métodos
-    private void iniciarVentanaCalculadora(){
+    protected void iniciar(){
         panel = new JPanel();
 
         labelNumero1 = new JLabel("Número 1:");
@@ -180,7 +180,6 @@ public class VentanaCalculadora extends JFrame{
                 textFieldResultado.setText(""+resultado);
             }
         });
-
 
         // Implementación de ActionListener para el botón limpiarButton
         limpiarButton.addActionListener(new ActionListener() {

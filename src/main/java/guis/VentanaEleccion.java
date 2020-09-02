@@ -55,7 +55,7 @@ public class VentanaEleccion extends JFrame{
         });
 
         // Implementación de ActionListener para el botón opcion2Button
-        opcion1Button.addActionListener(new ActionListener() {
+        opcion2Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
