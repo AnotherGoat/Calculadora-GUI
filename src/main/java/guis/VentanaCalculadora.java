@@ -74,6 +74,8 @@ public class VentanaCalculadora extends JFrame{
     public VentanaCalculadora(){
         iniciar();
 
+        v = new Validador();
+
         //// Otras características de la ventana
         // Título
         setTitle("Calculadora VM");

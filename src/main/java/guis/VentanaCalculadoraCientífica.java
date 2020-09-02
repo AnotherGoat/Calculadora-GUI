@@ -1,6 +1,7 @@
 package guis;
 
 import modelo.Calculadora;
+import utilidades.Validador;
 
 import java.awt.*;
 import java.awt.event.*;
