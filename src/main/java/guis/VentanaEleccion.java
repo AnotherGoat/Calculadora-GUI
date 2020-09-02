@@ -22,7 +22,7 @@ public class VentanaEleccion extends JFrame{
         // Título
         setTitle("Escoja el tipo de calculadora");
         // Tamaño inicial
-        setSize(600, 400);
+        setSize(400, 200);
         // Iniciar en el centro
         setLocationRelativeTo(null);
         // Terminar el programa al salir de la ventana
@@ -31,6 +31,7 @@ public class VentanaEleccion extends JFrame{
 
     public void iniciar(){
         panel = new JPanel();
+        panel.setLayout(new GridLayout(1, 2));
 
         opcion1Button = new JButton("Calculadora simple");
         opcion2Button = new JButton("Calculadora científica");
