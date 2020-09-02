@@ -9,14 +9,14 @@ public class Calculadora {
     /**
      * Primer número
      */
-    private int numero1;
+    private double numero1;
     /**
      * Segundo número
      */
-    private int numero2;
+    private double numero2;
 
     //// Constructores
-    public Calculadora(int numero1, int numero2) {
+    public Calculadora(double numero1, double numero2) {
         this.numero1 = numero1;
         this.numero2 = numero2;
     }
@@ -24,66 +24,66 @@ public class Calculadora {
     //// Métodos
     /**
      * Suma 2 números
-     * @return int con el resultado
+     * @return double con el resultado
      */
-    public int sumar(){
+    public double sumar(){
         return numero1 + numero2;
     }
 
     /**
      * Resta 2 números
-     * @return int con el resultado
+     * @return double con el resultado
      */
-    public int restar(){
+    public double restar(){
         return numero1 - numero2;
     }
 
     /**
      * Multiplica 2 números
-     * @return int con el resultado
+     * @return double con el resultado
      */
-    public int multiplicar(){
+    public double multiplicar(){
         return numero1 * numero2;
     }
 
     /**
      * Divide 2 números
-     * @return int con el resultado
+     * @return double con el resultado
      */
-    public int dividir(){
+    public double dividir(){
         return numero1 / numero2;
     }
 
     /**
      * Calcula la potencia entre 2 números
-     * @return int con el resultado
+     * @return double con el resultado
      */
-    public int potencia(){
-        return (int)Math.pow(numero1, numero2);
+    public double potencia(){
+        return Math.pow(numero1, numero2);
     }
 
     /**
      * Calcula la raíz entre 2 números
-     * @return int con el resultado
+     * @return double con el resultado
      */
-    public int raiz(){
-        return (int)Math.pow(numero1, 1/numero2);
+    public double raiz(){
+        return Math.pow(numero1, 1/numero2);
     }
 
     // Getters y Setters
-    public int getNumero1() {
+    public double getNumero1() {
         return numero1;
     }
 
-    public void setNumero1(int numero1) {
+    public void setNumero1(double numero1) {
         this.numero1 = numero1;
     }
 
-    public int getNumero2() {
+    public double getNumero2() {
         return numero2;
     }
 
-    public void setNumero2(int numero2) {
+    public void setNumero2(double numero2) {
         this.numero2 = numero2;
     }
 }

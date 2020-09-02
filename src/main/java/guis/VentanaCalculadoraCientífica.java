@@ -21,6 +21,16 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
     //// Constructores
     public VentanaCalculadoraCientífica(){
         iniciar();
+
+        //// Otras características de la ventana
+        // Título
+        setTitle("Calculadora Científica VM");
+        // Tamaño inicial
+        setSize(640, 300);
+        // Iniciar en el centro
+        setLocationRelativeTo(null);
+        // Terminar el programa al salir de la ventana
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public void iniciar(){
@@ -42,12 +52,12 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Calculadora c;
-                int num1 = Integer.parseInt(textFieldNumero1.getText());
-                int num2 = Integer.parseInt(textFieldNumero2.getText());
+                double num1 = Double.parseDouble(textFieldNumero1.getText());
+                double num2 = Double.parseDouble(textFieldNumero2.getText());
 
                 c = new Calculadora(num1, num2);
 
-                int resultado = c.potencia();
+                double resultado = c.potencia();
 
                 textFieldResultado.setText(""+resultado);
             }
@@ -58,12 +68,12 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Calculadora c;
-                int num1 = Integer.parseInt(textFieldNumero1.getText());
-                int num2 = Integer.parseInt(textFieldNumero2.getText());
+                double num1 = Double.parseDouble(textFieldNumero1.getText());
+                double num2 = Double.parseDouble(textFieldNumero2.getText());
 
                 c = new Calculadora(num1, num2);
 
-                int resultado = c.raiz();
+                double resultado = c.raiz();
 
                 textFieldResultado.setText(""+resultado);
             }

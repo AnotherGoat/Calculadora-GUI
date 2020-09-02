@@ -73,7 +73,7 @@ public class VentanaCalculadora extends JFrame{
         // Título
         setTitle("Calculadora VM");
         // Tamaño inicial
-        setSize(600, 400);
+        setSize(640, 300);
         // Iniciar en el centro
         setLocationRelativeTo(null);
         // Terminar el programa al salir de la ventana
@@ -88,9 +88,9 @@ public class VentanaCalculadora extends JFrame{
         labelNumero2 = new JLabel("Número 2:");
         labelResultado = new JLabel("Resultado:");
 
-        textFieldNumero1 = new JTextField(10);
-        textFieldNumero2 = new JTextField(10);
-        textFieldResultado = new JTextField(10);
+        textFieldNumero1 = new JTextField(12);
+        textFieldNumero2 = new JTextField(12);
+        textFieldResultado = new JTextField(12);
         textFieldResultado.setEditable(false);
 
         sumarButton = new JButton("Sumar");
@@ -122,12 +122,12 @@ public class VentanaCalculadora extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Calculadora c;
-                int num1 = Integer.parseInt(textFieldNumero1.getText());
-                int num2 = Integer.parseInt(textFieldNumero2.getText());
+                double num1 = Double.parseDouble(textFieldNumero1.getText());
+                double num2 = Double.parseDouble(textFieldNumero2.getText());
 
                 c = new Calculadora(num1, num2);
 
-                int resultado = c.sumar();
+                double resultado = c.sumar();
 
                 textFieldResultado.setText(""+resultado);
             }
@@ -138,12 +138,12 @@ public class VentanaCalculadora extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Calculadora c;
-                int num1 = Integer.parseInt(textFieldNumero1.getText());
-                int num2 = Integer.parseInt(textFieldNumero2.getText());
+                double num1 = Double.parseDouble(textFieldNumero1.getText());
+                double num2 = Double.parseDouble(textFieldNumero2.getText());
 
                 c = new Calculadora(num1, num2);
 
-                int resultado = c.restar();
+                double resultado = c.restar();
 
                 textFieldResultado.setText(""+resultado);
             }
@@ -154,12 +154,12 @@ public class VentanaCalculadora extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Calculadora c;
-                int num1 = Integer.parseInt(textFieldNumero1.getText());
-                int num2 = Integer.parseInt(textFieldNumero2.getText());
+                double num1 = Double.parseDouble(textFieldNumero1.getText());
+                double num2 = Double.parseDouble(textFieldNumero2.getText());
 
                 c = new Calculadora(num1, num2);
 
-                int resultado = c.multiplicar();
+                double resultado = c.multiplicar();
 
                 textFieldResultado.setText(""+resultado);
             }
@@ -170,12 +170,12 @@ public class VentanaCalculadora extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Calculadora c;
-                int num1 = Integer.parseInt(textFieldNumero1.getText());
-                int num2 = Integer.parseInt(textFieldNumero2.getText());
+                double num1 = Double.parseDouble(textFieldNumero1.getText());
+                double num2 = Double.parseDouble(textFieldNumero2.getText());
 
                 c = new Calculadora(num1, num2);
 
-                int resultado = c.dividir();
+                double resultado = c.dividir();
 
                 textFieldResultado.setText(""+resultado);
             }
