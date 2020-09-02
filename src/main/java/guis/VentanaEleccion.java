@@ -1,7 +1,5 @@
 package guis;
 
-import modelo.Calculadora;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;

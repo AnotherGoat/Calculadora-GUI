@@ -1,6 +1,5 @@
 package lanzador;
 
-import guis.VentanaCalculadora;
 import guis.VentanaEleccion;
 
 /**
