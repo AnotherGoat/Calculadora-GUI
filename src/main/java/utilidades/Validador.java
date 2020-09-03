@@ -1,10 +1,5 @@
 package utilidades;
 
-import java.io.ByteArrayInputStream;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * Esta clase tiene todos los métodos para validar y recibir entrada
  */
@@ -40,6 +35,7 @@ public class Validador {
                 return false;
             }
         }
+
         return true;
     }
 }

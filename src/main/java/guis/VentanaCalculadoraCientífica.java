@@ -1,6 +1,7 @@
 package guis;
 
 import modelo.Calculadora;
+import modelo.CalculadoraCientifica;
 import utilidades.Validador;
 
 import java.awt.*;
@@ -63,13 +64,13 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
                 }
 
                 else {
-                    Calculadora c;
+                    CalculadoraCientifica cc;
                     double num1 = Double.parseDouble(textFieldNumero1.getText());
                     double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                    c = new Calculadora(num1, num2);
+                    cc = new CalculadoraCientifica(num1, num2);
 
-                    double resultado = c.potencia();
+                    double resultado = cc.potencia();
 
                     textFieldResultado.setText("" + resultado);
                 }
@@ -86,13 +87,13 @@ public class VentanaCalculadoraCientífica extends VentanaCalculadora {
                 }
 
                 else {
-                    Calculadora c;
+                    CalculadoraCientifica cc;
                     double num1 = Double.parseDouble(textFieldNumero1.getText());
                     double num2 = Double.parseDouble(textFieldNumero2.getText());
 
-                    c = new Calculadora(num1, num2);
+                    cc = new CalculadoraCientifica(num1, num2);
 
-                    double resultado = c.raiz();
+                    double resultado = cc.raiz();
 
                     textFieldResultado.setText("" + resultado);
                 }

@@ -9,13 +9,16 @@ public class Calculadora {
     /**
      * Primer número
      */
-    private double numero1;
+    protected double numero1;
     /**
      * Segundo número
      */
-    private double numero2;
+    protected double numero2;
 
     //// Constructores
+    public Calculadora() {
+    }
+
     public Calculadora(double numero1, double numero2) {
         this.numero1 = numero1;
         this.numero2 = numero2;
@@ -52,22 +55,6 @@ public class Calculadora {
      */
     public double dividir(){
         return numero1 / numero2;
-    }
-
-    /**
-     * Calcula la potencia entre 2 números
-     * @return double con el resultado
-     */
-    public double potencia(){
-        return Math.pow(numero1, numero2);
-    }
-
-    /**
-     * Calcula la raíz entre 2 números
-     * @return double con el resultado
-     */
-    public double raiz(){
-        return Math.pow(numero1, 1/numero2);
     }
 
     // Getters y Setters
